@@ -8,7 +8,7 @@ import app from "../src/app";
 import request from "supertest";
 import env from "../src/config";
 
-describe.only("express and prisma", () => {
+describe("express and prisma", () => {
   jest.setTimeout(180_000); // needed for first download of pg image
   let container: StartedPostgreSqlContainer;
   let client: PrismaClient;

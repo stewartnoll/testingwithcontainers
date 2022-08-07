@@ -6,8 +6,8 @@ This repo is a playground for experimenting with [testcontainers-node](https://g
 
 In here you will find:
 
-- an approach at tying prisma into a containerized postgres instance (./test/prisma.ts)
-- supertest-powered integration test covering an express app utilizing prisma and postgres (./test/express-and-prisma.test.ts)
+- an approach at tying prisma into a containerized postgres instance ([./test/prisma.ts](https://github.com/stewartnoll/testingwithcontainers/blob/main/test/prisma.test.ts))
+- supertest-powered integration test covering an express app utilizing prisma and postgres ([./test/express-and-prisma.test.ts](https://github.com/stewartnoll/testingwithcontainers/blob/main/test/express-and-prisma.test.ts))
 - reproduction of tests found in testcontainers-node repo linked above
 
 Prerequisite:

@@ -29,7 +29,7 @@ describe.only("express and prisma", () => {
         },
       },
     });
-    // configure app to use containerized db
+    // configure env variable with containerized db url
     env.DATABASE_URL = dbUrl;
   });
 
@@ -39,7 +39,7 @@ describe.only("express and prisma", () => {
   });
 
   it("works", async () => {
-    // seed the db
+    // arrange / seed the db
     const user = await client.user.create({
       data: {
         name: "Bob",
@@ -60,9 +60,12 @@ describe.only("express and prisma", () => {
       },
     });
 
+    // act
     const response = await request(app)
       .get(`/posts?authorId=${user.id}`)
       .set("Accept", "application/json");
+
+    // assert
     const posts = response.body.data;
     expect(posts.length).toBe(2);
     expect(posts[0].author.name).toBe("Bob");

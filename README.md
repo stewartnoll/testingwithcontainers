@@ -20,4 +20,4 @@ To run tests:
 npm test
 ```
 
-\*\* note: first run of the tests will take some time due to images being pulled down from dockerhub. Subsequent runs will not incur the download hit
+\*\* note: first run of the tests will take some time due to images being pulled down from dockerhub hence the long timeouts in each test. Subsequent runs will not incur the download hit
